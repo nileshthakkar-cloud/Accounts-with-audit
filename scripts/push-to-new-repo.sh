@@ -13,6 +13,16 @@ Examples:
 USAGE
 }
 
+
+prepare_remote_url() {
+  local url="$1"
+  if [[ -n "${GITHUB_TOKEN:-}" && "$url" =~ ^https://github.com/ ]]; then
+    echo "$url" | sed "s#https://github.com/#https://x-access-token:${GITHUB_TOKEN}@github.com/#"
+  else
+    echo "$url"
+  fi
+}
+
 if [[ $# -lt 2 ]]; then
   usage
   exit 1
@@ -101,7 +111,8 @@ if [[ "$MODE" == "github" ]]; then
   gh repo create "$GITHUB_REPO" "$VISIBILITY" --source=. --remote=origin --push
   echo "✅ New GitHub repository created and pushed: https://github.com/$GITHUB_REPO ($BRANCH)"
 else
-  git remote add origin "$REMOTE_URL"
+  AUTH_REMOTE_URL="$(prepare_remote_url "$REMOTE_URL")"
+  git remote add origin "$AUTH_REMOTE_URL"
   git push -u origin "$BRANCH"
   echo "✅ New repository created and pushed: $REMOTE_URL ($BRANCH)"
 fi

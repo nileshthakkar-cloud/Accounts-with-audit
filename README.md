@@ -43,3 +43,15 @@ Examples:
 5. Either:
    - pushes to the provided remote URL, or
    - creates a new GitHub repo via `gh` and pushes.
+
+
+## Pushing to private GitHub repositories in non-interactive environments
+
+If your environment cannot prompt for username/password, export a Personal Access Token and use the remote-URL mode:
+
+```bash
+export GITHUB_TOKEN=<your_token>
+./scripts/push-to-new-repo.sh ../dubai-b2b-travel-site https://github.com/OWNER/REPO.git main
+```
+
+The script will automatically convert the URL to token-based HTTPS auth when `GITHUB_TOKEN` is set.
