@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dubai Connect B2B Travel Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav container">
+      <div class="logo">DubaiConnect<span>B2B</span></div>
+      <a class="btn btn-light" href="#contact">Become a Partner</a>
+    </nav>
+    <div class="container hero-content">
+      <p class="eyebrow">Trusted DMC for UAE Trade Partners</p>
+      <h1>One B2B Platform for Dubai Visas, Hotels, Packages & Excursions</h1>
+      <p class="lead">Empower your agency with fast visa processing, live hotel contracting, ready-to-sell holiday packages, and curated sightseeing inventory across the UAE.</p>
+      <div class="cta-row">
+        <a class="btn" href="#services">Explore Services</a>
+        <a class="btn btn-outline" href="#contact">Request B2B Rates</a>
+      </div>
+      <ul class="kpis">
+        <li><strong>24-72h</strong><span>Dubai Visa Turnaround</span></li>
+        <li><strong>500+</strong><span>Hotels Contracted</span></li>
+        <li><strong>150+</strong><span>Excursions & Activities</span></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="services" class="section container">
+      <h2>Core B2B Travel Services</h2>
+      <div class="grid-4">
+        <article class="card">
+          <h3>Dubai Visa Services</h3>
+          <p>Tourist, transit, and urgent visa support with document verification and real-time status updates.</p>
+        </article>
+        <article class="card">
+          <h3>Hotel Bookings</h3>
+          <p>Net rates for city, beach, and luxury properties with instant confirmation and flexible allotments.</p>
+        </article>
+        <article class="card">
+          <h3>Holiday Packages</h3>
+          <p>Custom FIT and group packages for leisure, family, honeymoon, and MICE segments.</p>
+        </article>
+        <article class="card">
+          <h3>Excursions & Transfers</h3>
+          <p>Desert safari, city tours, theme parks, yacht charters, and airport transfers under one account.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container split">
+        <div>
+          <h2>Why Partner With DubaiConnectB2B?</h2>
+          <ul class="ticks">
+            <li>Dedicated account manager for your agency.</li>
+            <li>Quick quotation desk for urgent inquiries.</li>
+            <li>Competitive contracted rates and seasonal offers.</li>
+            <li>Support for both small agencies and large consolidators.</li>
+            <li>White-label itinerary and voucher assistance.</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Top Selling Experiences</h3>
+          <ul>
+            <li>Burj Khalifa At The Top</li>
+            <li>Dubai Marina Dhow Cruise</li>
+            <li>Abu Dhabi Grand Mosque Tour</li>
+            <li>IMG Worlds & Atlantis Aquaventure</li>
+            <li>Premium Desert Safari with BBQ</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="contact">
+      <h2>Start Your B2B Partnership</h2>
+      <p class="lead">Share your agency details and our trade team will contact you with rates and onboarding steps.</p>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Our B2B team will contact you shortly.');">
+        <label>
+          Agency Name
+          <input type="text" required placeholder="Your travel agency" />
+        </label>
+        <label>
+          Contact Person
+          <input type="text" required placeholder="Full name" />
+        </label>
+        <label>
+          Business Email
+          <input type="email" required placeholder="name@agency.com" />
+        </label>
+        <label>
+          Services Needed
+          <select required>
+            <option value="">Select one</option>
+            <option>Dubai Visa</option>
+            <option>Hotels</option>
+            <option>Packages</option>
+            <option>Excursions</option>
+            <option>All Services</option>
+          </select>
+        </label>
+        <button class="btn" type="submit">Send Partnership Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 DubaiConnectB2B. Dubai Travel Agency for Trade Partners.</p>
+    </div>
+  </footer>
+</body>
+</html>
